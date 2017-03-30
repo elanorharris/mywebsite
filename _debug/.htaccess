@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+# Urls to exclude
+RewriteCond %{REQUEST_URI} !/ssl.php$
+
+# IP to allow access
+# RewriteCond %{REMOTE_HOST} !^127\\.0\\.0\\.1$
+
+# Send to root
+RewriteRule .? / [R=302,L]
